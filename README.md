@@ -1,3 +1,83 @@
+
+### Register a New User
+
+- **URL:** `/home/register`
+- **Method:** `POST`
+- **Description:** Registers a new user.
+- **Request Body:**
+  - JSON object representing the user to be registered
+  - Includes details such as username, email, password, etc.
+- **Response Body:**
+  - Success message if the user is registered successfully
+  - Error message if the user already exists or if there's an internal server error
+
+
+
+### Login (Spring Security)
+
+- **URL:** `/login`
+- **Method:** `POST`
+- **Description:** Spring Security login endpoint.
+- **Request Body:**
+  - Form data in x-www-form-urlencoded format
+  - Includes fields such as username and password
+- **Response Body:**
+  - Authentication token or session cookie if login is successful
+  - Error message if login fails or if there's an internal server error
+
+
+### Get All Wishlist Items
+
+- **URL:** `/api/wishlist`
+- **Method:** `GET`
+- **Description:** Retrieves all items in the user's wishlist.
+- **Request Body:** None
+- **Response Body:**
+  - List of items in the wishlist
+  - Each item includes its details such as name, description, etc.
+
+
+
+
+### Add an Item to Wishlist
+
+- **URL:** `/api/wishlist`
+- **Method:** `POST`
+- **Description:** Adds a new item to the user's wishlist.
+- **Request Body:**
+  - JSON object representing the item to be added
+  - Includes details such as name, description, etc.
+- **Response Body:**
+  - Success message if the item is added successfully
+  - Error message if the item already exists or if there's an internal server error
+
+
+
+### Delete an Item from Wishlist
+
+- **URL:** `/api/wishlist/{id}`
+- **Method:** `DELETE`
+- **Description:** Deletes an item from the user's wishlist based on its ID.
+- **Path Variable:**
+  - `id`: ID of the item to be deleted
+- **Response Body:**
+  - Success message if the item is deleted successfully
+  - Error message if there's an internal server error
+
+## Testing
+
+The WishlistManagement application includes comprehensive unit and integration tests to ensure the correctness and reliability of its features. The tests cover various scenarios and use cases, including but not limited to:
+- Testing controller endpoints using Spring MVC's MockMvc framework.
+- Testing service layer methods for business logic and data manipulation.
+- Testing repository layer methods for database interactions.
+- Testing security configurations and authentication mechanisms.
+
+To run the tests:
+1. Navigate to the project directory in your terminal.
+2. Execute the following Maven command:
+
+   ```bash
+   mvn test
 ## Setup
 
 1. Clone the repository:
