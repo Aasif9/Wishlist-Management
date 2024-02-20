@@ -24,10 +24,6 @@
    mvn spring-boot:run
    ```
 
-## Database Schema
-
-![Database Schema](images/DatabaseSchema.drawio.png)
-
 
 ## Database Setup
 
